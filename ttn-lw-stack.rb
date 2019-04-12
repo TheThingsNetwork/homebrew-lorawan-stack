@@ -2,9 +2,9 @@
 class TtnLwStack < Formula
   desc "The Things Network Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.0.1/lorawan-stack_3.0.1_darwin_amd64.tar.gz"
-  version "3.0.1"
-  sha256 "b6a601e99821f4c12d5fcac906e0805c61f56432a788e0e99deae5383de5f879"
+  url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.0.2/lorawan-stack_3.0.2_darwin_amd64.tar.gz"
+  version "3.0.2"
+  sha256 "387ea824af5ae1e206beeacf317d489faed247cb4ab64d8b46e1d4aa9e4c4560"
 
   def install
     bin.install "ttn-lw-cli"
