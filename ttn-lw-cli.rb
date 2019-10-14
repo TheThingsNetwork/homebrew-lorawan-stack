@@ -2,16 +2,25 @@
 class TtnLwCli < Formula
   desc "CLI of The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.2.1"
+  version "3.2.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.2.1/lorawan-stack-cli_3.2.1_darwin_amd64.tar.gz"
-    sha256 "68552bf3069031083d086ae85360fad96ffad1dc84710dc102e05699b3a786bb"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.2.2/lorawan-stack-cli_3.2.2_darwin_amd64.tar.gz"
+    sha256 "0c09ba498e13494ae4e7607bdf5e71c2d441272c2ff03b91063396adc2246458"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.2.1/lorawan-stack-cli_3.2.1_linux_amd64.tar.gz"
-      sha256 "38a2f6b9b1a26a3a9143cb070d92dd8ffc49201d0c618bfbbbe599ac406c651a"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.2.2/lorawan-stack-cli_3.2.2_linux_amd64.tar.gz"
+      sha256 "bf341fcde0764776433d05c42d295bd3425710f3e9a8a8bf102c84721186ae00"
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.2.2/lorawan-stack-cli_3.2.2_linux_arm64.tar.gz"
+        sha256 "39184c66dd0aa7f4eadd19ab9ee9ea91ed6da38f0bed81797829aa5ef98d0a80"
+      else
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.2.2/lorawan-stack-cli_3.2.2_linux_armv6.tar.gz"
+        sha256 "4ee585c821c6dfca2782769fd1d6aab58ad0aaa71dc83b15bc747bcd4356c01c"
+      end
     end
   end
   
