@@ -7,19 +7,19 @@ class TtnLwCli < Formula
 
   if OS.mac?
     url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.2.3/lorawan-stack-cli_3.2.3_darwin_amd64.tar.gz"
-    sha256 "26b58a77c751636597e6fa366b230500d1de786baae876599b9fde8e00062e4b"
+    sha256 "9e35994019eb9fffde242bbecc9d6e681607efccbb76baa9156dc4511a70bd31"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.2.3/lorawan-stack-cli_3.2.3_linux_amd64.tar.gz"
-      sha256 "70ebcad60214fda2d00102289cda3c247bae8733098ce1504695ad474b492d5a"
+      sha256 "0a7282d26195a6ade6fe557f1c31c51a074b0ed4bc4d46c9f91c02e548b9b0b9"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.2.3/lorawan-stack-cli_3.2.3_linux_arm64.tar.gz"
-        sha256 "7183e70e0776d4357569cf949464ac9bc7b20afd80c6b240daec971bc0f01db6"
+        sha256 "ff57c4ba2b9c6c136536fb94bab2fc2587f85f37c073ae3eff6c8f118bf78668"
       else
         url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.2.3/lorawan-stack-cli_3.2.3_linux_armv6.tar.gz"
-        sha256 "d6af120387ba96dc9ded65099f7cb5e82f0ca85c4674bb19a927c3417e3a0a67"
+        sha256 "2475cec8aeda0c9c17ffc4286a2a9131f0e7f5f9fddc13472c4355207f862d1a"
       end
     end
   end
