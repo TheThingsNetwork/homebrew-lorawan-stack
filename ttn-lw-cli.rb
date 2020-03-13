@@ -2,24 +2,24 @@
 class TtnLwCli < Formula
   desc "CLI of The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.6.0"
+  version "3.6.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.6.0/lorawan-stack-cli_3.6.0_darwin_amd64.tar.gz"
-    sha256 "f45cde779bde7fa7a73a5d91bdb71f686542681d539fd7c8cc2aeda89d40cf86"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.6.1/lorawan-stack-cli_3.6.1_darwin_amd64.tar.gz"
+    sha256 "4e196bd6536f4706c9098f5ef24ad1fc1d2455afa2f7fa78c66d3682f500fcea"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.6.0/lorawan-stack-cli_3.6.0_linux_amd64.tar.gz"
-      sha256 "a2f93315d42265cffd43afbbb0752075668ccd4720ebd5d8b32f8f763aecb452"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.6.1/lorawan-stack-cli_3.6.1_linux_amd64.tar.gz"
+      sha256 "477d46fe40f662865612dec68e76444390f161e8083332ad2605ba10eddf80c3"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.6.0/lorawan-stack-cli_3.6.0_linux_arm64.tar.gz"
-        sha256 "7bb5a58ad7d98c7e141522dcfab05802688c15894f3f48256553c41b3d889758"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.6.1/lorawan-stack-cli_3.6.1_linux_arm64.tar.gz"
+        sha256 "9401a6a0fd02e882340772b0326fae984ae115e60c89d835484b81124046d348"
       else
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.6.0/lorawan-stack-cli_3.6.0_linux_armv6.tar.gz"
-        sha256 "08e490643f09c2aa66d6352dd2e2466503f84c4ac8f6868f0f6480c1107ccd92"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.6.1/lorawan-stack-cli_3.6.1_linux_armv6.tar.gz"
+        sha256 "dee8682154e2490ba5e010f8b70b1d8356ed34819df48e54c60e2a635b379a87"
       end
     end
   end
@@ -28,6 +28,5 @@ class TtnLwCli < Formula
 
   def install
     bin.install "ttn-lw-cli"
-    libexec.install doc
   end
 end
