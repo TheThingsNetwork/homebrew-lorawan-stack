@@ -2,24 +2,24 @@
 class TtnLwStack < Formula
   desc "The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.6.0"
+  version "3.6.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.6.0/lorawan-stack_3.6.0_darwin_amd64.tar.gz"
-    sha256 "1f62c84578b9d5011e9ffb7484b1c377de761907b6b6e1fef10cb0ad13f30057"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.6.1/lorawan-stack_3.6.1_darwin_amd64.tar.gz"
+    sha256 "592515ac690038980fefa6b92aae245466297cf3a500ee08cf4a127d5a7a4673"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.6.0/lorawan-stack_3.6.0_linux_amd64.tar.gz"
-      sha256 "be2ff992299a5670605a4748c72d573f38ebb65c3240a38fe245666fb6c703e0"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.6.1/lorawan-stack_3.6.1_linux_amd64.tar.gz"
+      sha256 "b295edef073a31652aa1413a1ae159d8ef67b99fce8318338fb3c6a53684ad36"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.6.0/lorawan-stack_3.6.0_linux_arm64.tar.gz"
-        sha256 "d6108b90489db9f0a93b5713444f9b8164c1c0a2c2f8c8cf936f210400e374d4"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.6.1/lorawan-stack_3.6.1_linux_arm64.tar.gz"
+        sha256 "9b1d3199b01c3272ef825a1218138ec86dd1f2b7d9be434d4f662b61685486a9"
       else
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.6.0/lorawan-stack_3.6.0_linux_armv6.tar.gz"
-        sha256 "4e70b21579cfdaae6e1c60155e5e6a9a8f6bc0324bad420823e9f136ea43f1b4"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.6.1/lorawan-stack_3.6.1_linux_armv6.tar.gz"
+        sha256 "f1ab90ae6c115e67fb26190920e261edab8a1ae2ef8197d2497c212c07d906fc"
       end
     end
   end
@@ -28,7 +28,7 @@ class TtnLwStack < Formula
 
   def install
     bin.install "ttn-lw-cli"
-    libexec.install %w[ttn-lw-stack public doc]
+    libexec.install %w[ttn-lw-stack public]
     env = {
         :TTN_LW_HTTP_STATIC_SEARCH_PATH => libexec/"public"
     }
