@@ -2,24 +2,24 @@
 class TtnLwStack < Formula
   desc "The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.8.7"
+  version "3.9.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.8.7/lorawan-stack_3.8.7_darwin_amd64.tar.gz"
-    sha256 "51bcb9786d8ff892b90c2342625028a27b8675aba3a18d14467c58edc96f49e2"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.1/lorawan-stack_3.9.1_darwin_amd64.tar.gz"
+    sha256 "633d86cd505844b8dc3ca5930141869c14f4a55e3478d5b5e1c291111c70b584"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.8.7/lorawan-stack_3.8.7_linux_amd64.tar.gz"
-      sha256 "2a2acd6db5a036650a9962cf866fc09b78d398695eb2ea789c9f666914d85825"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.1/lorawan-stack_3.9.1_linux_amd64.tar.gz"
+      sha256 "44d3e295b9081fb9b64cc80285f11fd454163e164657f4811a77c82ec86edd05"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.8.7/lorawan-stack_3.8.7_linux_arm64.tar.gz"
-        sha256 "adbd1a9d579113a589a86285476ccb11642a62f1fb0824a7434f57ebf5142ec5"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.1/lorawan-stack_3.9.1_linux_arm64.tar.gz"
+        sha256 "f254b8871f9b5a2c03d805a30395cd4db0ea97758de408277c01dfa7e791e706"
       else
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.8.7/lorawan-stack_3.8.7_linux_armv6.tar.gz"
-        sha256 "3a80db3e8731673427637525dee31bbebbc5478edb688ae4d4b429f190e0bddd"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.1/lorawan-stack_3.9.1_linux_armv6.tar.gz"
+        sha256 "4c0081c0257dc0c59ca08358f608053748e225eb81268a6bb085cf34105f05f5"
       end
     end
   end
@@ -33,5 +33,11 @@ class TtnLwStack < Formula
         :TTN_LW_HTTP_STATIC_SEARCH_PATH => libexec/"public"
     }
     (bin/"ttn-lw-stack").write_env_script libexec/"ttn-lw-stack", env
+    bash_completion.install "config/completion/bash/ttn-lw-cli"
+    zsh_completion.install "config/completion/zsh/_ttn-lw-cli"
+    fish_completion.install "config/completion/fish/ttn-lw-cli.fish"
+    bash_completion.install "config/completion/bash/ttn-lw-stack"
+    zsh_completion.install "config/completion/zsh/_ttn-lw-stack"
+    fish_completion.install "config/completion/fish/ttn-lw-stack.fish"
   end
 end
