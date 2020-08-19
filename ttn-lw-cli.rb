@@ -2,24 +2,24 @@
 class TtnLwCli < Formula
   desc "CLI of The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.8.7"
+  version "3.9.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.8.7/lorawan-stack-cli_3.8.7_darwin_amd64.tar.gz"
-    sha256 "085a41fb7dd2ab46ff8fbedd67ebe62f65b72903e6998cdf0630d794a1852211"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.1/lorawan-stack-cli_3.9.1_darwin_amd64.tar.gz"
+    sha256 "6746ae471a937e32942cfc3d19fc98a79fac05495d7d240436847d2a96bdbeec"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.8.7/lorawan-stack-cli_3.8.7_linux_amd64.tar.gz"
-      sha256 "3f00dbc27692f46bd4fce75903437902b5aa0a21a6180dfc7735505cc8e0bd50"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.1/lorawan-stack-cli_3.9.1_linux_amd64.tar.gz"
+      sha256 "0bb45967e14c205475e909480768ebbd83eed3f4ef9e5b3c99c5d355c6bfb263"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.8.7/lorawan-stack-cli_3.8.7_linux_arm64.tar.gz"
-        sha256 "1040e227f915c7d430ab2ffae1531bc5e0d9f8bdbb8b1cc660f4f72ec087eaa5"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.1/lorawan-stack-cli_3.9.1_linux_arm64.tar.gz"
+        sha256 "e507392ee12523c616311925d94ca5ef695037ce6201237584e121426cdf421e"
       else
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.8.7/lorawan-stack-cli_3.8.7_linux_armv6.tar.gz"
-        sha256 "211c323a97005ed80528911144615f4098e6f84120dffc0dff5a2f639661cd2f"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.1/lorawan-stack-cli_3.9.1_linux_armv6.tar.gz"
+        sha256 "388eb3e3e115b94c998382fae9451733820f76b4fcd5e665a4b009bb7710b1c3"
       end
     end
   end
@@ -28,5 +28,8 @@ class TtnLwCli < Formula
 
   def install
     bin.install "ttn-lw-cli"
+    bash_completion.install "config/completion/bash/ttn-lw-cli"
+    zsh_completion.install "config/completion/zsh/_ttn-lw-cli"
+    fish_completion.install "config/completion/fish/ttn-lw-cli.fish"
   end
 end
