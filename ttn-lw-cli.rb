@@ -2,24 +2,24 @@
 class TtnLwCli < Formula
   desc "CLI of The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.10.0"
+  version "3.10.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.0/lorawan-stack-cli_3.10.0_darwin_amd64.tar.gz"
-    sha256 "f9122f7e99bd320637abc2a72a6b64e5a2d719ec676225372e93285d131c4064"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.1/lorawan-stack-cli_3.10.1_darwin_amd64.tar.gz"
+    sha256 "3350a2ca5537d19ff2040e9a1ab906f148e03f1b0c225f078ed372f75bacea4d"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.0/lorawan-stack-cli_3.10.0_linux_amd64.tar.gz"
-      sha256 "6d8e36c5169d4369874095dd79e248cafc77f3f2f6edb857231a628e17b4312d"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.1/lorawan-stack-cli_3.10.1_linux_amd64.tar.gz"
+      sha256 "f5235c96a25d62450bd11187599fda7c8d2da2f20963628a26ee2c3c40483d8e"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.0/lorawan-stack-cli_3.10.0_linux_arm64.tar.gz"
-        sha256 "8ae4e4e1d9f23f1ccc4dbf1c7da56a95460b14ef62907258c0047e3fb762898c"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.1/lorawan-stack-cli_3.10.1_linux_arm64.tar.gz"
+        sha256 "4f911b105a629d974fefb685e3d45e5eedae55be031fe915c2d966e4c5bebaa3"
       else
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.0/lorawan-stack-cli_3.10.0_linux_armv6.tar.gz"
-        sha256 "802d916095f7707a7194ebeffee59ba8166befebf305c37ab6e85f78ece1634d"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.1/lorawan-stack-cli_3.10.1_linux_armv6.tar.gz"
+        sha256 "e90d048762bab5100610116dfb3f62e3f37b53a169989f190790968e0733436e"
       end
     end
   end
