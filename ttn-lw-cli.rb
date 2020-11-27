@@ -2,24 +2,24 @@
 class TtnLwCli < Formula
   desc "CLI of The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.10.1"
+  version "3.10.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.1/lorawan-stack-cli_3.10.1_darwin_amd64.tar.gz"
-    sha256 "3350a2ca5537d19ff2040e9a1ab906f148e03f1b0c225f078ed372f75bacea4d"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.2/lorawan-stack-cli_3.10.2_darwin_amd64.tar.gz"
+    sha256 "e435702f4657d28039b0829db3478913667c227031c171b0dc8906c590bf10d7"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.1/lorawan-stack-cli_3.10.1_linux_amd64.tar.gz"
-      sha256 "f5235c96a25d62450bd11187599fda7c8d2da2f20963628a26ee2c3c40483d8e"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.2/lorawan-stack-cli_3.10.2_linux_amd64.tar.gz"
+      sha256 "4b8bf5c84b4d4d059d839a3b6e03db240ed595d85cf9c985bd8a5d53fe7b7079"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.1/lorawan-stack-cli_3.10.1_linux_arm64.tar.gz"
-        sha256 "4f911b105a629d974fefb685e3d45e5eedae55be031fe915c2d966e4c5bebaa3"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.2/lorawan-stack-cli_3.10.2_linux_arm64.tar.gz"
+        sha256 "952e10d12d2591084ef909f2cba4e5bf2819cceb1641803b41faa82d2a888bb2"
       else
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.1/lorawan-stack-cli_3.10.1_linux_armv6.tar.gz"
-        sha256 "e90d048762bab5100610116dfb3f62e3f37b53a169989f190790968e0733436e"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.2/lorawan-stack-cli_3.10.2_linux_armv6.tar.gz"
+        sha256 "d941ce6b4ffa0126316ea540a690ddc681935a86189120aad76ffc71b1623558"
       end
     end
   end
