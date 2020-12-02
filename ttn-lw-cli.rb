@@ -2,24 +2,24 @@
 class TtnLwCli < Formula
   desc "CLI of The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.10.3"
+  version "3.9.5"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.3/lorawan-stack-cli_3.10.3_darwin_amd64.tar.gz"
-    sha256 "af3bd38415a01ed98806419ba1f812c9c9f2684291327728e710ee31227da81b"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.5/lorawan-stack-cli_3.9.5_darwin_amd64.tar.gz"
+    sha256 "eb26cfeef8acfe0aaaa445fd79b7355f25b7667392390ba184af7be5c634c270"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.3/lorawan-stack-cli_3.10.3_linux_amd64.tar.gz"
-      sha256 "227b2449438ff1499e5e75b66f287059c4ed6ffda620b6622039d8159d52dd35"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.5/lorawan-stack-cli_3.9.5_linux_amd64.tar.gz"
+      sha256 "4de3b64325b805f724c3b474e591468240e18352b86ce57394ff1213cedf9f92"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.3/lorawan-stack-cli_3.10.3_linux_arm64.tar.gz"
-        sha256 "036ae466fe3a318263d94ec0f9753ae8ca515a7e096b36839e9adca0a7e9d2c0"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.5/lorawan-stack-cli_3.9.5_linux_arm64.tar.gz"
+        sha256 "eb6433d117b420c2ed733ea56cd537594f435eea4c0d9b3cdd411fdb95ea36ed"
       else
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.3/lorawan-stack-cli_3.10.3_linux_armv6.tar.gz"
-        sha256 "274a36080a6364e78188bfc75848452534da5b82e2f98442230e694d58ca5744"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.5/lorawan-stack-cli_3.9.5_linux_armv6.tar.gz"
+        sha256 "99a244291fe1ac9afc6f87b96676a8de287343cba83211b404ee325ed3ed643b"
       end
     end
   end
