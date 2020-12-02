@@ -2,24 +2,24 @@
 class TtnLwStack < Formula
   desc "The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.10.3"
+  version "3.9.5"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.3/lorawan-stack_3.10.3_darwin_amd64.tar.gz"
-    sha256 "e1c15754cbf3d81d9126bf36f2b32f42f8346466d0850c53d190c4bc654f7b9f"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.5/lorawan-stack_3.9.5_darwin_amd64.tar.gz"
+    sha256 "04f611d8c0baedee78a27ae9f74ef62e7fda120c7f9ed9d1b5f9bdf2549b2c1a"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.3/lorawan-stack_3.10.3_linux_amd64.tar.gz"
-      sha256 "63d18c90f58c7eb9bc9647a637608319cb2fe6359d2bd7a8b260beae3dbbdb08"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.5/lorawan-stack_3.9.5_linux_amd64.tar.gz"
+      sha256 "c99cdcc1458295176f53b49a8357a95ee9dc7873ebe2c329e23280373f526a8d"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.3/lorawan-stack_3.10.3_linux_arm64.tar.gz"
-        sha256 "0f59ddac1f270e927f9c7791648eafbe2ad8acde78628920417f8270ad51a4f8"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.5/lorawan-stack_3.9.5_linux_arm64.tar.gz"
+        sha256 "764ccf4678efd1b27552af03e771bc82e13ea8b91f56ef34a8718ba150df13d2"
       else
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.3/lorawan-stack_3.10.3_linux_armv6.tar.gz"
-        sha256 "2abc29de02c5da25687b96678f275ea32189b98dc923b32ea6195109d37606c4"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.5/lorawan-stack_3.9.5_linux_armv6.tar.gz"
+        sha256 "bbab269755ac993150f0949d5277ca379b9e94647ba518b999a8857e66dba3ae"
       end
     end
   end
