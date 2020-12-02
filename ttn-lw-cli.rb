@@ -2,24 +2,24 @@
 class TtnLwCli < Formula
   desc "CLI of The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.10.2"
+  version "3.10.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.2/lorawan-stack-cli_3.10.2_darwin_amd64.tar.gz"
-    sha256 "e435702f4657d28039b0829db3478913667c227031c171b0dc8906c590bf10d7"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.3/lorawan-stack-cli_3.10.3_darwin_amd64.tar.gz"
+    sha256 "af3bd38415a01ed98806419ba1f812c9c9f2684291327728e710ee31227da81b"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.2/lorawan-stack-cli_3.10.2_linux_amd64.tar.gz"
-      sha256 "4b8bf5c84b4d4d059d839a3b6e03db240ed595d85cf9c985bd8a5d53fe7b7079"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.3/lorawan-stack-cli_3.10.3_linux_amd64.tar.gz"
+      sha256 "227b2449438ff1499e5e75b66f287059c4ed6ffda620b6622039d8159d52dd35"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.2/lorawan-stack-cli_3.10.2_linux_arm64.tar.gz"
-        sha256 "952e10d12d2591084ef909f2cba4e5bf2819cceb1641803b41faa82d2a888bb2"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.3/lorawan-stack-cli_3.10.3_linux_arm64.tar.gz"
+        sha256 "036ae466fe3a318263d94ec0f9753ae8ca515a7e096b36839e9adca0a7e9d2c0"
       else
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.2/lorawan-stack-cli_3.10.2_linux_armv6.tar.gz"
-        sha256 "d941ce6b4ffa0126316ea540a690ddc681935a86189120aad76ffc71b1623558"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.3/lorawan-stack-cli_3.10.3_linux_armv6.tar.gz"
+        sha256 "274a36080a6364e78188bfc75848452534da5b82e2f98442230e694d58ca5744"
       end
     end
   end
