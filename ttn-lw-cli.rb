@@ -2,24 +2,24 @@
 class TtnLwCli < Formula
   desc "CLI of The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.9.5"
+  version "3.10.4"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.5/lorawan-stack-cli_3.9.5_darwin_amd64.tar.gz"
-    sha256 "eb26cfeef8acfe0aaaa445fd79b7355f25b7667392390ba184af7be5c634c270"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.4/lorawan-stack-cli_3.10.4_darwin_amd64.tar.gz"
+    sha256 "160405d3a7c6c184e2f2d37537ecfa2d4f0d59cc754e8464fb9097cf5805d06d"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.5/lorawan-stack-cli_3.9.5_linux_amd64.tar.gz"
-      sha256 "4de3b64325b805f724c3b474e591468240e18352b86ce57394ff1213cedf9f92"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.4/lorawan-stack-cli_3.10.4_linux_amd64.tar.gz"
+      sha256 "c84a9f6a0c391f27a7e7d3e85b00f3066b7f17da6e1910e9bf0155fa6096d900"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.5/lorawan-stack-cli_3.9.5_linux_arm64.tar.gz"
-        sha256 "eb6433d117b420c2ed733ea56cd537594f435eea4c0d9b3cdd411fdb95ea36ed"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.4/lorawan-stack-cli_3.10.4_linux_arm64.tar.gz"
+        sha256 "5592e12ddd6ec45137addf177a30ac9c552571d51e52b93bf0b529ecb8b5501a"
       else
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.9.5/lorawan-stack-cli_3.9.5_linux_armv6.tar.gz"
-        sha256 "99a244291fe1ac9afc6f87b96676a8de287343cba83211b404ee325ed3ed643b"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.4/lorawan-stack-cli_3.10.4_linux_armv6.tar.gz"
+        sha256 "3378700eae38d3d70b2522d9d4820cdbccf3f6efe57823e7f17c7a1af57e34fa"
       end
     end
   end
