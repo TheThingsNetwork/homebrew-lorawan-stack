@@ -2,24 +2,24 @@
 class TtnLwCli < Formula
   desc "CLI of The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.10.4"
+  version "3.10.5"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.4/lorawan-stack-cli_3.10.4_darwin_amd64.tar.gz"
-    sha256 "160405d3a7c6c184e2f2d37537ecfa2d4f0d59cc754e8464fb9097cf5805d06d"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.5/lorawan-stack-cli_3.10.5_darwin_amd64.tar.gz"
+    sha256 "96e0b03a298bd55ac7eda27cbca13c0eefe459fd8b9c2fe3c620a7706ba165a5"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.4/lorawan-stack-cli_3.10.4_linux_amd64.tar.gz"
-      sha256 "c84a9f6a0c391f27a7e7d3e85b00f3066b7f17da6e1910e9bf0155fa6096d900"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.5/lorawan-stack-cli_3.10.5_linux_amd64.tar.gz"
+      sha256 "db4719d7658196e7e6908b75790d6dca2cad7f053cf7536b70937a2bd089805f"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.4/lorawan-stack-cli_3.10.4_linux_arm64.tar.gz"
-        sha256 "5592e12ddd6ec45137addf177a30ac9c552571d51e52b93bf0b529ecb8b5501a"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.5/lorawan-stack-cli_3.10.5_linux_arm64.tar.gz"
+        sha256 "569195823b51d5c5119f8825316a39ec7f496bc2621ea5fad50338cabe6ca7ff"
       else
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.4/lorawan-stack-cli_3.10.4_linux_armv6.tar.gz"
-        sha256 "3378700eae38d3d70b2522d9d4820cdbccf3f6efe57823e7f17c7a1af57e34fa"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.5/lorawan-stack-cli_3.10.5_linux_armv6.tar.gz"
+        sha256 "196d4958910cc5d67a6cad3d6c5821a2714e386b7f341e97fa6930bbebad9e2d"
       end
     end
   end
