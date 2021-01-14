@@ -2,24 +2,24 @@
 class TtnLwCli < Formula
   desc "CLI of The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.10.6"
+  version "3.10.7"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.6/lorawan-stack-cli_3.10.6_darwin_amd64.tar.gz"
-    sha256 "5b96c56f2c2a84dd3f65d50cb89c2a5e48f16a6dd1a130b959160b308a930f8f"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.7/lorawan-stack-cli_3.10.7_darwin_amd64.tar.gz"
+    sha256 "07a4e73edac792025a41488732655df11ec9b993a6d60ce8e27ff46e2e0b1757"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.6/lorawan-stack-cli_3.10.6_linux_amd64.tar.gz"
-      sha256 "eaef0fcd8233b6857a5f73dc825c663e4f98d1ff1c3ea298ae18a95f254a7b39"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.7/lorawan-stack-cli_3.10.7_linux_amd64.tar.gz"
+      sha256 "b9816209dca672b1db87cde98cec11ecbeb7d2a7c4b72a4e64e5f35f8b1f0ee0"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.6/lorawan-stack-cli_3.10.6_linux_arm64.tar.gz"
-        sha256 "fe60269f13197bc4be8bc26672cc916837bc7b63900a95f64a3277972977f84a"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.7/lorawan-stack-cli_3.10.7_linux_arm64.tar.gz"
+        sha256 "4095e57d7be7180e271f0d3f37451d14cb482c320c6f86ea0e41b15d5ad33c10"
       else
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.6/lorawan-stack-cli_3.10.6_linux_armv6.tar.gz"
-        sha256 "639b55ec92ff9632ee611fbe839eec99440dab1506767105239eb191ffb81b5e"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.7/lorawan-stack-cli_3.10.7_linux_armv6.tar.gz"
+        sha256 "acc538ff2615480ab7b3a01c0ccfb5bb52f95e4a4d5af19b1a2c07dc05837dbc"
       end
     end
   end
