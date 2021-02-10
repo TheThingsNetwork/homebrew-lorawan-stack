@@ -2,24 +2,24 @@
 class TtnLwCli < Formula
   desc "CLI of The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.10.7"
+  version "3.11.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.7/lorawan-stack-cli_3.10.7_darwin_amd64.tar.gz"
-    sha256 "07a4e73edac792025a41488732655df11ec9b993a6d60ce8e27ff46e2e0b1757"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.11.0/lorawan-stack-cli_3.11.0_darwin_amd64.tar.gz"
+    sha256 "d8725bfd2de831c317d752a03b78fc6a72662d83424b2c1e778e76931b74ebf9"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.7/lorawan-stack-cli_3.10.7_linux_amd64.tar.gz"
-      sha256 "b9816209dca672b1db87cde98cec11ecbeb7d2a7c4b72a4e64e5f35f8b1f0ee0"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.11.0/lorawan-stack-cli_3.11.0_linux_amd64.tar.gz"
+      sha256 "53c25ca453d1e1af16aa0b604fe4e3ae3bab101acb0e0b3bcb44d397f94d405a"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.7/lorawan-stack-cli_3.10.7_linux_arm64.tar.gz"
-        sha256 "4095e57d7be7180e271f0d3f37451d14cb482c320c6f86ea0e41b15d5ad33c10"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.11.0/lorawan-stack-cli_3.11.0_linux_arm64.tar.gz"
+        sha256 "ab61f3005c79375f1d576d6d1ef9f9921a351e379f3071db6bbfa167bbad324d"
       else
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.10.7/lorawan-stack-cli_3.10.7_linux_armv6.tar.gz"
-        sha256 "acc538ff2615480ab7b3a01c0ccfb5bb52f95e4a4d5af19b1a2c07dc05837dbc"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.11.0/lorawan-stack-cli_3.11.0_linux_armv6.tar.gz"
+        sha256 "9750fe463a20502cfd3048db74988cddade609114c3550c0d5ee50de5e5d70e5"
       end
     end
   end
