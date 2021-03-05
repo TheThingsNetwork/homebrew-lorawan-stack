@@ -2,24 +2,24 @@
 class TtnLwCli < Formula
   desc "CLI of The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.11.1"
+  version "3.11.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.11.1/lorawan-stack-cli_3.11.1_darwin_amd64.tar.gz"
-    sha256 "655c8686324265561e7e2a6ea5aa38cf26c35d0df1c1aa054fba1a8710cbb274"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.11.2/lorawan-stack-cli_3.11.2_darwin_amd64.tar.gz"
+    sha256 "0a6c96df6ce278dbc055b5a1ca7d6bf194422c8dc5c0094ffa8bbeb79276f4cb"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.11.1/lorawan-stack-cli_3.11.1_linux_amd64.tar.gz"
-      sha256 "0849855ad1c56c4ae6f269092433cc505bce386c6cec4b52bdc2080ebb1cad6a"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.11.2/lorawan-stack-cli_3.11.2_linux_amd64.tar.gz"
+      sha256 "2586f8fc7a1aa291073e3dc0c296808b8624fa7e08b9e9a089791b441a151be8"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.11.1/lorawan-stack-cli_3.11.1_linux_arm64.tar.gz"
-        sha256 "60cf5259c7608b3acf60442f92b14f0d9f961ba92ae54320fb75d1f7ebbe1720"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.11.2/lorawan-stack-cli_3.11.2_linux_arm64.tar.gz"
+        sha256 "cd94c221bcb7b78f214f952a558f2a23a345a6b94de43526caa0f86fad54d1b3"
       else
-        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.11.1/lorawan-stack-cli_3.11.1_linux_armv6.tar.gz"
-        sha256 "b1a45e88b027853efa9fdebc99a115d49077c7092b454ed20e7a9c7f51eed7e6"
+        url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.11.2/lorawan-stack-cli_3.11.2_linux_armv6.tar.gz"
+        sha256 "2cd1804e7d725ee5a36a315fae0ae9c846967c1d3b66818dc13fe891236c3284"
       end
     end
   end
