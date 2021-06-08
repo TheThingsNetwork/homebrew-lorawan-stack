@@ -5,24 +5,28 @@
 class TtnLwMigrate < Formula
   desc "Migrate from other LoRaWAN network servers to The Things Stack"
   homepage "https://www.thethingsnetwork.org"
-  version "0.5.0"
+  version "0.6.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.5.0/lorawan-stack-migrate_0.5.0_darwin_amd64.tar.gz"
-    sha256 "e8eb65fce25f4e6a01d8413ce04affcbc1e720eb0ceb0f2b6798703881938d9b"
+    url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.6.0/lorawan-stack-migrate_0.6.0_darwin_amd64.tar.gz"
+    sha256 "95141e0cbc468c53c33a0229a19e626d9fedfd36881e0c89d20f1705ad0b76c6"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.6.0/lorawan-stack-migrate_0.6.0_darwin_arm64.tar.gz"
+    sha256 "2b8f1dd804d5fd1179861a6932c24c7a269cc37028a99753d76180aa3f9ffd9b"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.5.0/lorawan-stack-migrate_0.5.0_linux_amd64.tar.gz"
-    sha256 "74b8b0f374adeead2cef6773afa74aedea9050d9e300a7e856385d4254ff3754"
+    url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.6.0/lorawan-stack-migrate_0.6.0_linux_amd64.tar.gz"
+    sha256 "55be1fc9fd4374691e2e12e0729d1b9c6c915ae177b63d4a18667d41c63b7117"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.5.0/lorawan-stack-migrate_0.5.0_linux_armv6.tar.gz"
-    sha256 "b2df5695ceb3cea767a944be91fa9fda716bbde706c7ec8895f4b031ffa606f2"
+    url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.6.0/lorawan-stack-migrate_0.6.0_linux_armv6.tar.gz"
+    sha256 "40f277ef8e48825c815dce4b17b4e1ff21262385550fe103549dacc627ca3753"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.5.0/lorawan-stack-migrate_0.5.0_linux_arm64.tar.gz"
-    sha256 "5a020ae66be164d99fa0eebcc32719bf997cbffaa7bf753e2749856ccd3d7aa7"
+    url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.6.0/lorawan-stack-migrate_0.6.0_linux_arm64.tar.gz"
+    sha256 "985347bebd8d58c4a462d414c618feedac9e8b1670858ff408149ff882b438a6"
   end
 
   def install
