@@ -5,28 +5,28 @@
 class TtnLwStack < Formula
   desc "The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.13.3"
+  version "3.14.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.13.3/lorawan-stack_3.13.3_darwin_amd64.tar.gz"
-    sha256 "6679a172bd7be78eaa76983708b59790dbd28820886284e2935a2ab077e5aa9d"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.14.0/lorawan-stack_3.14.0_darwin_amd64.tar.gz"
+    sha256 "a24bedf339e58db7847419a5b8297cb0957e8578bc3dff5d71674435f6fc671c"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.13.3/lorawan-stack_3.13.3_darwin_arm64.tar.gz"
-    sha256 "4cfa337e0689613b1d2e52d4f0982ab30239348a6fed0670d4c0211148a3f217"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.14.0/lorawan-stack_3.14.0_darwin_arm64.tar.gz"
+    sha256 "10f84a3077d918a038df840bfb66f27dadc2295cb5e6fdf127a1a2cc24c2788e"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.13.3/lorawan-stack_3.13.3_linux_amd64.tar.gz"
-    sha256 "bc15fc554e6b08b3ff8d0fc2c6fc353fb51641113d53d5de1963e1bab90e9ee4"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.14.0/lorawan-stack_3.14.0_linux_amd64.tar.gz"
+    sha256 "3801867ef50e06e438af48be6f3d64cebd66975f054a0d4ed6793bdf74e82642"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.13.3/lorawan-stack_3.13.3_linux_armv6.tar.gz"
-    sha256 "f3b890660f47f64afa0724b5cb99445bdade63ef6c7fa40b9faa721cf0c7c88e"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.14.0/lorawan-stack_3.14.0_linux_armv6.tar.gz"
+    sha256 "60035e6f2e3ed7912587cf829940156d1db5c6904e9dfed07e72cb0bb33454c5"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.13.3/lorawan-stack_3.13.3_linux_arm64.tar.gz"
-    sha256 "f5ac7b819665687537fd9f565b86c22d68632ee4a8cc1dfc59b3d8e8f3c6b1cb"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.14.0/lorawan-stack_3.14.0_linux_arm64.tar.gz"
+    sha256 "9017f5600b7e8c64e8e910e9f47cd840ec0fff4f4c6f93faf5a458a01574e73b"
   end
 
   conflicts_with "ttn-lw-cli"
