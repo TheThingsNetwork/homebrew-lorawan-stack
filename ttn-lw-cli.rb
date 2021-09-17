@@ -5,28 +5,24 @@
 class TtnLwCli < Formula
   desc "CLI of The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.14.2"
+  version "3.15.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.14.2/lorawan-stack-cli_3.14.2_darwin_amd64.tar.gz"
-    sha256 "3740e7d11601a3564ac7a57981cd28f8f32c7634c7af8c40878bbe536df3482a"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.14.2/lorawan-stack-cli_3.14.2_darwin_arm64.tar.gz"
-    sha256 "78ae1d2bb14636ac72da125a3b63d0b723360b3fb48bb690a91e73e887c4ed83"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.0/lorawan-stack-cli_3.15.0_darwin_amd64.tar.gz"
+    sha256 "9f322b5b87b739e62f9acab4b6412a3a9f610e784144069aee7ea302cc030636"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.14.2/lorawan-stack-cli_3.14.2_linux_amd64.tar.gz"
-    sha256 "e557253b3f5b11bbfde863944d14f8a130ef70a0cfdafa68bb32ce304bd70bf6"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.0/lorawan-stack-cli_3.15.0_linux_amd64.tar.gz"
+    sha256 "984ce4452754ac245fc006ed88532119aba35b1612e9c3af8777558587d5ec4c"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.14.2/lorawan-stack-cli_3.14.2_linux_armv6.tar.gz"
-    sha256 "ab205216d3811b19b0c802fec64ee00e089d2f52f8c020592cd10939a710141d"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.0/lorawan-stack-cli_3.15.0_linux_armv6.tar.gz"
+    sha256 "be673ccb68aba6bb7372c4a9a753e41a853c5627ad0cad7c608dd5855d253527"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.14.2/lorawan-stack-cli_3.14.2_linux_arm64.tar.gz"
-    sha256 "931ddfb82167242449cb769aee3eac90c22afb1334a83887136dc30f8b7362aa"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.0/lorawan-stack-cli_3.15.0_linux_arm64.tar.gz"
+    sha256 "6518bdb20e87827c1af9025b67bd43a1add94921bb21c36ace3f7b1ac91f8877"
   end
 
   conflicts_with "ttn-lw-stack"
