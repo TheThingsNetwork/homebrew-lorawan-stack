@@ -5,24 +5,24 @@
 class TtnLwStack < Formula
   desc "The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.15.0"
+  version "3.15.1"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.0/lorawan-stack_3.15.0_darwin_amd64.tar.gz"
-    sha256 "ede20bebdae17c21c3dca322a775340b19dfc62ea9f4c69d04b0ee4cc6f256a9"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.1/lorawan-stack_3.15.1_darwin_amd64.tar.gz"
+    sha256 "e853d1252630046551db68aed8745fed788e1a0b0ff94c0bad7132ea5c10d22b"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.0/lorawan-stack_3.15.0_linux_amd64.tar.gz"
-    sha256 "8622a96ab8cfd3cede87dabae44b095ce6f7c59353c765bef5006e2735b3aa0f"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.1/lorawan-stack_3.15.1_linux_amd64.tar.gz"
+    sha256 "6de01c025b0165d1d3815a6a4a8a38217052a6e3bed7da92d432e8abb8b9888b"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.0/lorawan-stack_3.15.0_linux_armv6.tar.gz"
-    sha256 "1c9103e235fe7c22502f677ee01a687c036f2c8e6d1d716e8ee6dbb6754c5e5e"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.1/lorawan-stack_3.15.1_linux_armv6.tar.gz"
+    sha256 "15986fab929a6aefe36e4cdf565cf7a9fb08d303d263eaea17c83fc6f4cc861f"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.0/lorawan-stack_3.15.0_linux_arm64.tar.gz"
-    sha256 "7391015e426e8943578c2123436c128dcd6c516b17ebbc6a0f1352b04d768be8"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.1/lorawan-stack_3.15.1_linux_arm64.tar.gz"
+    sha256 "92a55f76d41f88a113e5c851a82f0e6d26ec3f5da35ab5f403a4f929362a9367"
   end
 
   conflicts_with "ttn-lw-cli"
