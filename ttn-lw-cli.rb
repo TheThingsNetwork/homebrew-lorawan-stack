@@ -5,24 +5,24 @@
 class TtnLwCli < Formula
   desc "CLI of The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.15.2"
+  version "3.15.3"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.2/lorawan-stack-cli_3.15.2_darwin_amd64.tar.gz"
-    sha256 "ec4998a8f1c5fd5622922ba86661107365b824b1a3349723c990270ed9a05aed"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.3/lorawan-stack-cli_3.15.3_darwin_amd64.tar.gz"
+    sha256 "12a31a6b05adb89b46643ee1bd46c63dc8226f68d3c3b07e64ae8b438428a0ef"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.2/lorawan-stack-cli_3.15.2_linux_amd64.tar.gz"
-    sha256 "48fe0604c850532207c6191330c8ac37ec49381908ee20c45d0e077210b55619"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.3/lorawan-stack-cli_3.15.3_linux_amd64.tar.gz"
+    sha256 "872de94137b877460e38a7a3abaea803cecafb2b636874a40be7322afe8141fd"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.2/lorawan-stack-cli_3.15.2_linux_armv6.tar.gz"
-    sha256 "e3b8e096cd2d615979cc77b170abf2597af112bc0afdb444b37c14214b8488a4"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.3/lorawan-stack-cli_3.15.3_linux_armv6.tar.gz"
+    sha256 "b6505c0f4c09b62dfa5aad8e542d1dceda55f196c9d62729eb4c716f70527aa5"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.2/lorawan-stack-cli_3.15.2_linux_arm64.tar.gz"
-    sha256 "bf3159f753ba3009de7e0627b661df91a9e2795c8e4a306366e5f3e0f4a5dc9a"
+    url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.15.3/lorawan-stack-cli_3.15.3_linux_arm64.tar.gz"
+    sha256 "ed59893d8f595bd8b25b84123fc981356d0c659fae6a9f9abdf6c1ec375bef07"
   end
 
   conflicts_with "ttn-lw-stack"
