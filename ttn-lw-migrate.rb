@@ -5,27 +5,51 @@
 class TtnLwMigrate < Formula
   desc "Migrate from other LoRaWAN network servers to The Things Stack"
   homepage "https://www.thethingsnetwork.org"
-  version "0.8.0"
-  bottle :unneeded
+  version "0.8.1"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.8.0/lorawan-stack-migrate_0.8.0_darwin_amd64.tar.gz"
-    sha256 "d1f49bad5e8c0e42598ad02f5664e87b06af17daa280c9ab4219e3428f8e73b8"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.8.0/lorawan-stack-migrate_0.8.0_linux_amd64.tar.gz"
-    sha256 "f1cd1f09646a0c2aff0ea63e113fa625ed64216fa980ddaba7a8a0d04f5f36bb"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.8.0/lorawan-stack-migrate_0.8.0_linux_armv6.tar.gz"
-    sha256 "30440e18f64a91544f7d1d90cfba0dc47d92813293b698574f6bc764b2322291"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.8.0/lorawan-stack-migrate_0.8.0_linux_arm64.tar.gz"
-    sha256 "88c1b501f15ed235bf568767fc2ead0367f1002c73e911ab36134763fdcabc35"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.8.1/lorawan-stack-migrate_0.8.1_darwin_amd64.tar.gz"
+      sha256 "8f63b86be4ef6e6e51d252f24e6e3ced60546c2559710f2571cc57d72718f831"
+
+      def install
+        bin.install "ttn-lw-migrate"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.8.1/lorawan-stack-migrate_0.8.1_darwin_arm64.tar.gz"
+      sha256 "53279c015eee257de02130b77030682f5d516ca3ef891b3fb9cf97404be10e25"
+
+      def install
+        bin.install "ttn-lw-migrate"
+      end
+    end
   end
 
-  def install
-    bin.install "ttn-lw-migrate"
+  on_linux do
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.8.1/lorawan-stack-migrate_0.8.1_linux_armv6.tar.gz"
+      sha256 "880b14987199e54ae2bac5acbd9d1a5d0f52976cd2d519be2f68023f5721f59c"
+
+      def install
+        bin.install "ttn-lw-migrate"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.8.1/lorawan-stack-migrate_0.8.1_linux_amd64.tar.gz"
+      sha256 "fcf63fb8c7db4a0db170ea8ea0386da0bf66c3edbbf7134808d1a2d3648a421d"
+
+      def install
+        bin.install "ttn-lw-migrate"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/TheThingsNetwork/lorawan-stack-migrate/releases/download/v0.8.1/lorawan-stack-migrate_0.8.1_linux_arm64.tar.gz"
+      sha256 "c78ccf7277973da905af1c2a46d3629a5d56f9bfe44ac311ec246cc5a683b8f4"
+
+      def install
+        bin.install "ttn-lw-migrate"
+      end
+    end
   end
 end
