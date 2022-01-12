@@ -5,12 +5,12 @@
 class TtnLwStack < Formula
   desc "The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.17.0"
+  version "3.17.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.17.0/lorawan-stack_3.17.0_darwin_amd64.tar.gz"
-      sha256 "42ffec0cb221b103fe603ff5cc1701b2c5fff3d53eb803a57f24d8f3d8081877"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.17.1/lorawan-stack_3.17.1_darwin_amd64.tar.gz"
+      sha256 "c36cdaf3be6dcc5dafb26bf2e1d07b4520c8f8b93e5614d97f8396b854443d98"
 
       def install
         bin.install "ttn-lw-cli"
@@ -28,8 +28,8 @@ class TtnLwStack < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.17.0/lorawan-stack_3.17.0_darwin_arm64.tar.gz"
-      sha256 "0aca9a9bd3f247c0ab43be354d1df87aadb6f7d6ebcabe3cef49de340bfc5841"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.17.1/lorawan-stack_3.17.1_darwin_arm64.tar.gz"
+      sha256 "3a0007ad4ff2b7f8892482c76e772cc287c90d0d06be0218db3759ec8188900d"
 
       def install
         bin.install "ttn-lw-cli"
@@ -50,8 +50,8 @@ class TtnLwStack < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.17.0/lorawan-stack_3.17.0_linux_arm64.tar.gz"
-      sha256 "82c540775499d42bdca6e43ca32ee239c38944fad2911b47e8ded38380fb42ea"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.17.1/lorawan-stack_3.17.1_linux_arm64.tar.gz"
+      sha256 "781bc6a9070833e187580b9ca07d732dc480a472caad334e6b9ba7c64fae25ac"
 
       def install
         bin.install "ttn-lw-cli"
@@ -69,8 +69,8 @@ class TtnLwStack < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.17.0/lorawan-stack_3.17.0_linux_armv6.tar.gz"
-      sha256 "07cfbe7986c349f2d9482b7d5523020ec2a35ddc8f69c910cc5ef5b3318ecd69"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.17.1/lorawan-stack_3.17.1_linux_armv6.tar.gz"
+      sha256 "c9a5f62bb7b96103f98d7980a029d7e86779f6bed4debc0f22505cc94c96b9e1"
 
       def install
         bin.install "ttn-lw-cli"
@@ -88,8 +88,8 @@ class TtnLwStack < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.17.0/lorawan-stack_3.17.0_linux_amd64.tar.gz"
-      sha256 "424b686192b0fae801c368fb3f8b40313a5e79d688da9d227c39c67b23faebc1"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.17.1/lorawan-stack_3.17.1_linux_amd64.tar.gz"
+      sha256 "093ed3c61b6b466c41e8309277549f78b60e17f091426eb0e6fe5391b61834db"
 
       def install
         bin.install "ttn-lw-cli"
