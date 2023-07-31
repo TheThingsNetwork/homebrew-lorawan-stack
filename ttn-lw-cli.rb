@@ -5,12 +5,12 @@
 class TtnLwCli < Formula
   desc "CLI of The Things Stack for LoRaWAN"
   homepage "https://www.thethingsnetwork.org"
-  version "3.26.2"
+  version "3.27.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.26.2/lorawan-stack-cli_3.26.2_darwin_amd64.tar.gz"
-      sha256 "77feac21ba15f97a1b6619092cae4e99779f581705e9af476ae44d992548f607"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.27.0/lorawan-stack-cli_3.27.0_darwin_amd64.tar.gz"
+      sha256 "a8aa36634dc8757b555d3f695200b79b91d74e848e5d5efe8c42229843322f8b"
 
       def install
         bin.install "ttn-lw-cli"
@@ -20,8 +20,8 @@ class TtnLwCli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.26.2/lorawan-stack-cli_3.26.2_darwin_arm64.tar.gz"
-      sha256 "9f37122c2d08ab172465d60109622f9c677e76e17c2fadc63677f25e071f1361"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.27.0/lorawan-stack-cli_3.27.0_darwin_arm64.tar.gz"
+      sha256 "953adddb5b9301d6d02c2eb9fad97bd084ccc33f2bdfa70ca958c58e18310620"
 
       def install
         bin.install "ttn-lw-cli"
@@ -33,9 +33,9 @@ class TtnLwCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.26.2/lorawan-stack-cli_3.26.2_linux_arm64.tar.gz"
-      sha256 "db0341a42cc90cbae9fbfccb9ddbfdcf92557fb1b249b84b5104f42cdce87c78"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.27.0/lorawan-stack-cli_3.27.0_linux_armv6.tar.gz"
+      sha256 "4561f865792c301e9f5648666de148386d8969995e6f6e50e80a5629f4a38e86"
 
       def install
         bin.install "ttn-lw-cli"
@@ -44,9 +44,9 @@ class TtnLwCli < Formula
         fish_completion.install "config/completion/fish/ttn-lw-cli.fish"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.26.2/lorawan-stack-cli_3.26.2_linux_armv6.tar.gz"
-      sha256 "8cbddcce78be3cae0bf877e9b2b4b0ab0d65584bdb8d13b8d71a105f0a77c546"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.27.0/lorawan-stack-cli_3.27.0_linux_arm64.tar.gz"
+      sha256 "f9ba60e1cb8854db02938853be6c31fa9908a8533759b8c8aa51758bcf967b72"
 
       def install
         bin.install "ttn-lw-cli"
@@ -56,8 +56,8 @@ class TtnLwCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.26.2/lorawan-stack-cli_3.26.2_linux_amd64.tar.gz"
-      sha256 "12cb293d61657f9317688735862a524c86a4df93bd0647a3b76da33f2a04dd36"
+      url "https://github.com/TheThingsNetwork/lorawan-stack/releases/download/v3.27.0/lorawan-stack-cli_3.27.0_linux_amd64.tar.gz"
+      sha256 "4f08660d5aaef0f7ba3ed506b4b18c998b415579fc598e1f252e932434fa60de"
 
       def install
         bin.install "ttn-lw-cli"
